@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Coding Reasons Interpolation"
-date:       2018-07-26 22:53:51 +0000
+date:       2018-07-26 18:53:52 -0400
 permalink:  coding_reasons_interpolation
 ---
 
@@ -11,10 +11,7 @@ After many years as a health psychology research scientist, I was ready to make 
 Why, then, did I decide to pursue becoming a software engineer? The reasons, it turned out, were easy to interpolate: straightforward:
 
 ```
-1       reason_1 = "fun"
-
-2	      reason_2 = "plays to my strengths"
-
-3	      puts = "Coding is #{reason_1} and #{reason_2}."
+reason_1 = "fun"
+reason_2 = "plays to my strengths"
+puts = "Coding is #{reason_1} and #{reason_2}."
 ```
-
