@@ -15,13 +15,13 @@ I had created quite a saga from an easy set of code and corresponding tests! Yet
 
 An early step in building the Tic Tac Toe (TTT) game was to create a #display_board method to display an empty, standard game board using ASCII characters. There were only 3 required features: 
 
-1.  Each cell is presented by a string with 3 spaces:  "   "
-2.  Each row has 3 cells, the middle cell separated by 2 | (pipe) characters:
-3.  There are 3 rows, with 2 separating lines of 11 - (dash) characters: -----------
+* Each cell is presented by a string with 3 spaces:   "   "
+* Each row has 3 cells, the middle cell separated by 2 | (pipe) characters:
+* There are 3 rows, with 2 separating lines of 11 - (dash) characters: -----------
 
 My code for this first step is below. 
 
-![](https://imgur.com/LdlvgSW)
+<blockquote class="imgur-embed-pub" lang="en" data-id="LdlvgSW"><a href="//imgur.com/LdlvgSW">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 To my delight, the code displayed a lovely tic tac toe board with the required features and passed the RSpec tests!  
 
