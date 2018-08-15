@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      "**An Early Lesson in Test Driven Development**"
-date:       2018-08-15 04:17:37 +0000
+title:      "An Early Lesson in Test Driven Development"
+date:       2018-08-15 00:17:38 -0400
 permalink:  an_early_lesson_in_test_driven_development
 ---
 
@@ -21,8 +21,7 @@ An early step in building the Tic Tac Toe (TTT) game was to create a #display_bo
 
 My code for this first step is below. 
 
-![](https://1drv.ms/u/s!ArAVgxVYhRa-bVEEoqJIAQX-ceQ)
-
+https://lh3.googleusercontent.com/jt52INV09JH2_7aX8Iq9aEgiR35LDSkJoO7RL0hbh2g9ttZpMuurm5Z3GmKUN1C3a8qd8WaGQ8P8AvFNKsDesy0UbiR-yGzLJX2EaX4QXmbZRiclBw9Ayz6eAQKMp0KghU8s6cLJpXQGSOf04jcT3kj9zW8uthcYHTwTCoqfAZf3EkHcJFdD0dBhot23RwaAolox4GvfwCv0W7XMTU-B_L_hV2GYmNFwbH4YjeO7ZgFRmEE0ZYwL8LFLeHhv6YapUOrS-xKQ0K4ovobhqBecVWwIZrrj4ZXiTxrDzsLLq8JjBu-wKxW6ODg5l_A-0IJHjDETjuiUHm6Q9a0xHF6QuOQyJNhztKej2sVwk2ygd1cpvGO_7qZcw_1BGwdMsouTotT14cK5V2gnvoCgIO7FnJ2xQp8mSeNil-ffhzUSe2RR9JeYHKEYKm1MBXExfqdALcHzzMiORVls7biu83g1p1qRq3SGHXVahY_RgfbZQYL9cpp8bYugjhgBO0KlXf3te7Zmf7iNnOvNhEkyiABa-sPFT0M3zPe0GZ1TCYcqCHRnvXtJRxo6pyt2w0qHW4e-zK9A-bH4E6Zg1WW2YQjIm0-JJHqFQZ5EWeLV4Jw=w734-h340-no
 
 To my delight, the code displayed a lovely tic tac toe board with the required features and passed the RSpec tests!  
 
