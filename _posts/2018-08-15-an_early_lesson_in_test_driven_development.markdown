@@ -25,24 +25,26 @@ My code for this first step is below.
 
 To my delight, the code displayed a lovely tic tac toe board with the required features and passed the RSpec tests!  
 
+<blockquote class="imgur-embed-pub" lang="en" data-id="8Z3plvQ"><a href="//imgur.com/8Z3plvQ">TTT_BoardDisplay1_TestPassed.jpg</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+
+
 The next coding task was to display the same empty TTT board, as well as boards containing hypothetical player moves using "X" and "O" characters. 
 
-I wanted the code first to pass the tests related to displaying an empty board before I added "move" characters to the board array. I assumed I could use, essentially, the same code for printing the board as the first TTT board code.   
+I wanted the code first to pass the tests related to displaying an empty board before I added players' move characters to the board array. I assumed I could use, essentially, the same code for printing the board as the first TTT board code.   
 
-I moved the board array specifying the status of the game board cell contents outside the #display_board method and added a single argument. The argument can be used to call the board array containing all "empty" elements (3 spaces) or one or more "filled" elements (an "X" or "O" surrounded by spaces to maintain a total cell width of 3 spaces). 
+I moved the board array specifying the status of the game board cell contents outside the #display_board method and added a single argument. The argument can be used to call the board array containing all empty elements (3-space strings) or one or more filled elements (an "X" or "O" surrounded by a single space to maintain a total cell width of 3 spaces). 
 
 I was confident it would pass the tests because it displays the same standard TTT board as the first set of code! 
 
-![](https://1drv.ms/u/s!ArAVgxVYhRa-cw-u-HBvCRHevig)
+<blockquote class="imgur-embed-pub" lang="en" data-id="BTvbNtY"><a href="//imgur.com/BTvbNtY">TTT_Board2_Display.jpg</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 Alas, here is where RSpec entered stage right and began taunting me!  This code failed the first test specifying a blank TTT board.  The surprise was that the test results said my board's cells were too narrow (see white arrow)! How could that be when, clearly my board array defined cells that were three spaces wide, per specifications, using the string "   ". 
 
-![](https://1drv.ms/u/s!ArAVgxVYhRa-dEQA4oLiXCIMq7U)
+<blockquote class="imgur-embed-pub" lang="en" data-id="kt8xSTE"><a href="//imgur.com/kt8xSTE">RSpec_Board2_Failed.jpg</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 After several minor edits and failed tests (AKA descent into rabbit holes), I recoded the #display_board method as shown below to see if the string interpolation I used to print the row divider lines was a problem. I didn't feel confident in this version because I had no basis in Ruby documentation to support it, but it was worth a try.  However, version 2 of the second board code failed the same test in the same way as version 1!  The board cells were too narrow! 
 
-![](https://1drv.ms/u/s!ArAVgxVYhRa-dkT8lBKO0x2wFrw)
-
+<blockquote class="imgur-embed-pub" lang="en" data-id="kt8xSTE"><a href="//imgur.com/kt8xSTE">RSpec_Board2_Failed.jpg</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 At this point I had no more tricks in my bag. I had dug into Ruby documentation but could find nothing in my code that would create cells narrower than 3 spaces!  Finally, instead of trying to interpret the test error messages, I considered reading the test code. At the time, I thought this a form of cheating. Since I hadn't written the tests and was new to TDD, I felt like reading the test code was something akin to peeking at crossword puzzle answers! 
 
@@ -52,8 +54,7 @@ Um, actually, it was more like the Duh! Moment.
 
 The tests were expecting the blank board array elements to be a single space string " " not 3 spaces as I had used. (And guess what? The same information was staring at me in the lab instructions!) As a result, the only way I could add spaces to the board cells was by adding spaces, as strings, in the #display_board puts statements. This third version of the code passed the tests!  
 
-![](https://1drv.ms/u/s!ArAVgxVYhRa-dxYO9mNwDEissL8)
+<blockquote class="imgur-embed-pub" lang="en" data-id="xMAmMlk"><a href="//imgur.com/xMAmMlk">TTT_Board2_Ver3_FINALPassed.jpg</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 
-Like any morality play, the plot, on its face, is not really the story here. That is, the take-home lesson for me was only tangentially about code and RSpec tests. I was reminded that to write good code requires using soft skills, as well as technical skills. In this tale, I had only to find my Zen and review the information I already had at hand, not actually learn anything new about Ruby or RSpec. I focused too narrowly on finding a technical answer, so I overlooked the key information in plain view. In addition, I learned that building on prior versions of code may often be efficient, I should not assume that is the case. Looking with fresh eyes at the specs for a new task or project is always a good idea. 
-
+Like any morality play, the plot, on its face, is not really the story here. That is, the take-home lesson for me was only tangentially about code and RSpec tests. I was reminded that for us 21st century [Everycoder](https://en.wikipedia.org/wiki/Everyman_(play)) protagonists, we must utilize "soft skills", as well as technical skills. In this tale, I had only to find my Zen and review the information I already had at hand, not actually learn anything new about Ruby or RSpec. I focused too narrowly on finding a technical answer, so I overlooked the key information in plain view. In addition, I learned that, while building on prior versions of code may often be efficient, I should not assume that prior code that passed tests will meet specs for a different project, even if the code produces the "same" output. Looking with fresh eyes at the specs for a new task or project is always a good idea!
