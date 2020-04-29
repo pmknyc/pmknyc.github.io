@@ -1,6 +1,6 @@
 ---
 layout: post
-title:      "**A Ruby CLI Application: Daily Science News**"
+title:      "A Ruby CLI Application: Daily Science News"
 date:       2020-04-29 11:00:16 -0400
 permalink:  a_ruby_cli_application_daily_science_news
 ---
@@ -45,7 +45,7 @@ The site includes a Top Science page that appears to select headlines from all t
 
 The application uses three classes: Article, Scraper and CLI. My aim for structure and process flow, with the single responsibility principle in mind, was to define each class with a distinct role, including its communication with the other classes. The application flowchart illustrates these relationships. 
 
-![](C:\Users\pmkny\Downloads\ScienceDaily_CLI_flow.jpg)
+![](https://imgur.com/82nfSVn)
 
 Only the CLI class interacts directly with the User. It starts the program at the User’s command. This class contains the application’s main loop method that maintains process flow through the User’s decision points and information she sees on the console repeatedly until she chooses to exit. 
 
