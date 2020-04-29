@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "**A Ruby CLI Application: Daily Science News**"
-date:       2020-04-29 15:00:15 +0000
+date:       2020-04-29 11:00:16 -0400
 permalink:  a_ruby_cli_application_daily_science_news
 ---
 
@@ -27,11 +27,11 @@ The application shows the user 10 headlines of articles about current research f
 
 Until now, I had been writing Ruby code as part of student lab exercises guided by highly specified [RSpec](https://rspec.info/) tests. The tests reward me with cheery green feedback messages when I write code that creates the objects and return values specified in the tests, much nicer than the scary red font that delivers error messages! Facing a blank editor screen and empty project folder is a different matter! 
 
-Enter the Bundler {link} gem! Bundler sets up a conventional folder and file structure to build a Ruby gem application. Several key files are preloaded with instructions, links to helpful resources and example code to get you started. Working with Bundler was the first in a series of learning adventures with Ruby Gems { https://rubygems.org/} in this project. 
+Enter the [Bundler](https://bundler.io/) gem! Bundler sets up a conventional folder and file structure to build a Ruby gem application. Several key files are preloaded with instructions, links to helpful resources and example code to get you started. Working with Bundler was the first in a series of learning adventures with [Ruby Gems](https://rubygems.org/)  in this project. 
 
 ### Finding Some Data
 
-One of the first steps was finding a website with content that was interesting to me and feasible to access, given my current skill level. The bootcamp training prepared students to read website data using either the Ruby gem, Nokogiri {https://rubygems.org/gems/nokogiri} for website scraping or an application program interface (API). I chose to use scraping. 
+One of the first steps was finding a website with content that was interesting to me and feasible to access, given my current skill level. The bootcamp training prepared students to read website data using either the Ruby gem, [Nokogiri](https://rubygems.org/gems/nokogiri) for website scraping or an application program interface (API). I chose to use scraping. 
 
 ### Chopping That Data
 
@@ -45,7 +45,7 @@ The site includes a Top Science page that appears to select headlines from all t
 
 The application uses three classes: Article, Scraper and CLI. My aim for structure and process flow, with the single responsibility principle in mind, was to define each class with a distinct role, including its communication with the other classes. The application flowchart illustrates these relationships. 
 
-![](https://drive.google.com/file/d/1_dDW9MxLK1LuZIUnCtNde3cIWgzmfkjK/view?usp=sharing)
+![](C:\Users\pmkny\Downloads\ScienceDaily_CLI_flow.jpg)
 
 Only the CLI class interacts directly with the User. It starts the program at the User’s command. This class contains the application’s main loop method that maintains process flow through the User’s decision points and information she sees on the console repeatedly until she chooses to exit. 
 
@@ -75,11 +75,11 @@ TOPSCI_PAGE = "#{SITE}/news/top/science/"
     chosen_article  #article now has attributes
   end
 	
-	 def self.topsci_headlines_update #update time of most recent headlines list
+	def self.topsci_headlines_update #update time of most recent headlines list
     scrape = Nokogiri::HTML(open(TOPSCI_PAGE))
     update_time = scrape.css('div#time').text.delete_prefix('updated ').chop
     update_time
-   end
+  end
 ```
 
 The Scraper’s ```topsci_headlines_update``` method grabs a little bonus information, which figures into plans for later versions of the app. The website updates headlines multiple times each day and shows an update time for the various headlines lists throughout the site. Users see the update time in this current Version 0.1.0, but it provides no functional updating effect because a User can access only headlines on display at the source site when her session is initiated. In a future version, it would be fun to allow users, if they keep a session open, to return and check for list updates, then see the newest headlines.
