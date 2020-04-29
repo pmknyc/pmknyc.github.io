@@ -45,7 +45,7 @@ The site includes a Top Science page that appears to select headlines from all t
 
 The application uses three classes: Article, Scraper and CLI. My aim for structure and process flow, with the single responsibility principle in mind, was to define each class with a distinct role, including its communication with the other classes. The application flowchart illustrates these relationships. 
 
-![](https://imgur.com/82nfSVn)
+![Imgur](https://i.imgur.com/82nfSVn.jpg)
 
 Only the CLI class interacts directly with the User. It starts the program at the User’s command. This class contains the application’s main loop method that maintains process flow through the User’s decision points and information she sees on the console repeatedly until she chooses to exit. 
 
@@ -92,7 +92,7 @@ I can easily get lost in the toy store of [Ruby Gems]( https://rubygems.org)! To
 
 One aspect of my code is a bit unusual. I scoped almost all the methods as Class methods. Class methods make sense in the CLI and Scraper classes. The application is designed for one user to generate one active session, so it makes sense that it doesn’t need to maintain multiple instances of CLI or Scraper objects. In the Article class, however, there are multiple article instances! Even so, I was able to use class methods, except when instantiating the new article objects. This approach works but is not the typical pattern used for curriculum lab exercises. 
 
-I’m fine with using an unusual coding pattern, for myself. However, as another student and I reviewed each other’s projects, he pointed out my use of Class methods and gave really helpful feedback. It’s important to code with an eye on the future, including my own ideas for new application features, as well as the possibility that other developers may read or contribute to my work via the public repository {GitHub link}. So, another great lesson was my coding buddy’s reminder to use good coding practices and patterns at all stages of the process. I am, believe it or not, looking forward to my technical review with the bootcamp instructors as part of this assignment to hear their feedback. I welcome feedback from readers, too!
+I’m fine with using an unusual coding pattern, for myself. However, as another student and I reviewed each other’s projects, he pointed out my use of Class methods and gave really helpful feedback. It’s important to code with an eye on the future, including my own ideas for new application features, as well as the possibility that other developers may read or contribute to my work via the [public repository](https://github.com/pmknyc/science_daily). So, another great lesson was my coding buddy’s reminder to use good coding practices and patterns at all stages of the process. I am, believe it or not, looking forward to my technical review with the bootcamp instructors as part of this assignment to hear their feedback. I welcome feedback from readers, too!
 
 ## tl;dr
 
